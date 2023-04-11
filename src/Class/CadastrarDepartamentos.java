@@ -1,12 +1,17 @@
 package Class;
 
 import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Login extends Application {
+public class CadastrarDepartamentos extends Application {
     private static Stage stage;//Janela 1
     /**
      * @param args the command line arguments
@@ -16,10 +21,10 @@ public class Login extends Application {
     }
     
     @Override
-    public void start(final Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/View/Login.fxml"));//Carrega FXML
+    public void start(Stage stage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("/View/CadastrarDepartamentos.fxml"));//Carrega FXML
         Scene scene = new Scene (root);//Coloca o FXML em uma Cena
-        stage.setTitle("Login de Usuário");
+        stage.setTitle("Cadastrar Departamento");
         stage.setScene(scene);// Coloca a Cena em uma Janela
         stage.show();//Abre a Janela2
         setStage(stage);//Colocando a Janela2 na Janela1
@@ -30,7 +35,7 @@ public class Login extends Application {
     }
 
     public static void setStage(Stage stage) {
-        Login.stage = stage;//Seta na Janela1 a Janela2
+        CadastrarDepartamentos.stage = stage;//Seta na Janela1 a Janela2
     }
         
     
